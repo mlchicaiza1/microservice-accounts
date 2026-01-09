@@ -1,5 +1,6 @@
 package com.banco.cuentas.service;
 
+import com.banco.cuentas.contracts.IAccountService;
 import com.banco.cuentas.domain.Account;
 import com.banco.cuentas.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
-public class AccountService {
+public class AccountService implements IAccountService {
 
     private final AccountRepository accountRepository;
 

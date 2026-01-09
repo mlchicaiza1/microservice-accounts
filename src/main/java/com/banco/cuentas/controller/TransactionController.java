@@ -1,8 +1,8 @@
 package com.banco.cuentas.controller;
 
+import com.banco.cuentas.contracts.ITransactionService;
 import com.banco.cuentas.dto.TransactionDTO;
 import com.banco.cuentas.mapper.TransactionMapper;
-import com.banco.cuentas.service.TransactionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TransactionController {
 
-    private final TransactionService transactionService;
+    private final ITransactionService transactionService;
     private final TransactionMapper transactionMapper;
 
     @PostMapping

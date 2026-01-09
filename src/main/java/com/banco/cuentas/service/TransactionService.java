@@ -1,5 +1,6 @@
 package com.banco.cuentas.service;
 
+import com.banco.cuentas.contracts.ITransactionService;
 import com.banco.cuentas.domain.Account;
 import com.banco.cuentas.domain.AccountStatus;
 import com.banco.cuentas.domain.Transaction;
@@ -16,7 +17,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class TransactionService {
+public class TransactionService implements ITransactionService {
 
     private final TransactionRepository transactionRepository;
     private final AccountRepository accountRepository;

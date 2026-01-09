@@ -1,8 +1,8 @@
 package com.banco.cuentas.controller;
 
+import com.banco.cuentas.contracts.IAccountService;
 import com.banco.cuentas.dto.AccountDTO;
 import com.banco.cuentas.mapper.AccountMapper;
-import com.banco.cuentas.service.AccountService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AccountController {
 
-    private final AccountService accountService;
+    private final IAccountService accountService;
     private final AccountMapper accountMapper;
 
     @PostMapping
